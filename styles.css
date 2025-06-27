@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, Helvetica, sans-serif, "Courier New", Courier, monospace;
+  margin: 0; /*Verwijdert standaard witruimte rond de pagina.*/
+}
+
+#navbar {
+  position: fixed; /* Zet de navbar vast bovenaan het scherm */
+  top: 0; /* Zorgt dat hij aan de bovenkant blijft */
+  width: 100%; /* Laat de navbar de volledige breedte gebruiken */
+  padding: 1rem;
+  background-color: #cbd4c2;
+  color: #247ba0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  display: flex; /* Zet items in 1 rij */
+  gap: 1rem; /* Ruimte tussen de links */
+}
+
+#welcome-section {
+  background-color: #50514f;
+  display: flex; /* Flexbox aanzetten */
+  justify-content: center; /* Horizontaal in het midden */
+  align-items: center; /* Verticaal in het midden */
+  height: 100vh;
+  font-size: 40px;
+  color: #cbd4c2;
+}
+
+#intro {
+  margin: 10%; /* ruimte om p intro */
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #50514f;
+  font-size: 20px;
+}
+
+#projects {
+  background: #f5f5f5;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 gelijke kolommen */
+  gap: 2rem; /* ruimte tussen kolommen en rijen */
+}
+
+.project-tile {
+  background-color: #cbd4c2;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding-bottom: 50px;
+}
+
+.project-image {
+  width: 100%; /* Laat de afbeelding de volledige breedte van de tegel gebruiken */
+  height: 100%;
+  border-radius: 6px;
+}
+
+.project-tile a {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.project-tile a:hover {
+  color: #247ba0;
+}
+
+h2 {
+  text-align: center;
+  color: #cbd4c2;
+  background-color: #f5f5f5;
+  margin: auto;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+footer, #profile-link{
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px 20px 0px;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column; /* Zet de links onder elkaar op mobiel */
+    align-items: center; /* Centreer de links */
+    text-align: center; /* Zorg dat tekst in links ook gecentreerd is */
+  }
+
+  #projects {
+    grid-template-columns: 1fr; /* Toon projecten in 1 kolom op mobiel */
+    padding: 1.5rem; /* Iets minder padding voor mobiel */
+  }
+
+  .project-image {
+    width: 100%; /* Houd afbeeldingen responsief */
+    height: auto; /* Hoogte past automatisch aan */
+  }
+
+  h1 {
+    font-size: 28px; /* Iets kleinere titel op mobiel */
+    padding: 10px;
+  }
+
+  #welcome-section {
+    font-size: 32px; /* Tekst in het welkom-gedeelte kleiner */
+    padding: 1rem;
+    text-align: center;
+  }
+}
